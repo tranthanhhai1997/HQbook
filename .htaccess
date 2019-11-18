@@ -1,0 +1,33 @@
+RewriteEngine On
+RewriteRule ^(.*) - [E=BASE:%1]
+
+RewriteRule ^search?([a-z0-9_-]+)$ sach.php?ki_hieu=search
+RewriteRule ^([a-z0-9_-]+)/search?([a-z0-9_-]+)$ sach.php?ki_hieu=search
+RewriteRule ^sach/([a-z0-9_-]+)$ sach.php?ki_hieu=sach
+RewriteRule ^nxb/([a-z0-9_-]+)$ sach.php?ki_hieu=nxb
+RewriteRule ^tac-gia/([a-z0-9_-]+)$ sach.php?ki_hieu=tac_gia
+RewriteRule ^chi-tiet-sach/([a-z0-9_-]+)$ sach.php?ki_hieu=chi_tiet_sach
+
+RewriteRule ^lien-he/$ index.php?ki_hieu=lien_he
+
+RewriteRule ^khach-hang/them-vao-gio-hang$ khach_hang.php?ki_hieu=them_vao_gio_hang
+
+
+RewriteRule ^admin$ user.php?ki_hieu=login
+RewriteRule ^admin/$ user.php?ki_hieu=login
+RewriteRule ^dang-nhap/$ user.php?ki_hieu=login
+RewriteRule ^dang-nhap$ user.php?ki_hieu=login
+RewriteRule ^dang-xuat$ user.php?ki_hieu=logout
+RewriteRule ^thong-tin-user$ user.php?ki_hieu=thong_tin
+
+RewriteRule ^gio-hang$ khach_hang.php?ki_hieu=gio_hang
+RewriteRule ^gio-hang/cap-nhat.html$ khach_hang.php?ki_hieu=cap_nhat
+RewriteRule ^gio-hang/xoa-gio-hang.html$ khach_hang.php?ki_hieu=xoa_gio_hang
+
+RewriteRule ^xac-nhan-don-hang.html$ khach_hang.php?ki_hieu=dat_hang
+RewriteRule ^thong-tin-dat-hang.html$ khach_hang.php?ki_hieu=dat_hang
+
+RewriteRule ^admin/them-san-pham$ sach.php?ki_hieu=them_san_pham
+RewriteRule ^admin/xoa-san-pham$ sach.php?ki_hieu=xoa_san_pham
+RewriteRule ^admin/xoa-san-pham/([a-z0-9_-]+)$ sach.php?ki_hieu=xoa_san_pham_ok
+RewriteRule ^admin/sua-san-pham$ sach.php?ki_hieu=sua_san_pham
